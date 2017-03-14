@@ -4,8 +4,11 @@ call plug#begin('~/.config/nvim/init.vim')
 Plug 'sbdchd/neoformat'
 call plug#end()
 filetype plugin indent on
-syntax on
-colorscheme distinguished 
+syntax enable
+set t_Co=256
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized 
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:jsx_ext_required = 0
@@ -67,3 +70,11 @@ xnoremap <C-n>  :m-2<CR>gv=gv
 
 " move selected lines down one line
 xnoremap <C-m> :m'>+<CR>gv=gv
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
