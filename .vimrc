@@ -17,6 +17,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:flow#autoclose = 1
 let NERDTreeShowHidden=1
 autocmd VimEnter * NERDTree
 let g:ctrlp_map = '<c-p>'
@@ -25,8 +26,6 @@ let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 let delimitMate_expand_cr = 1
 autocmd VimEnter * wincmd p
-autocmd FileType javascript set formatprg=prettier\ --stdin
-autocmd BufWritePre *.js exe "normal! gggqG\<C-o>\<C-o>"
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " \r will now refresh nerd tree and ctrl p cache
 nmap <Leader>r :NERDTreeFocus<cr>R<c-w><c-p>:CtrlPClearCache<cr>
