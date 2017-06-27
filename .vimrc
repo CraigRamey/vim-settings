@@ -22,6 +22,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:flow#autoclose = 1
 let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_max_files=0
